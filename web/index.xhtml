@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Tela de Login</title>
+        <link href="scripts/CSS/bootstrap.css" rel="stylesheet"/>
+    </h:head>
+
+
+
+    <h:body>
+        <h:body>
+            <div class="container col-md-12">
+                <h:form class="form-signin col-md-5 container" > 
+                    <h2 class="form-signin-heading text-center">Login</h2>
+                    <h:inputText class="form-control mt-2 mb-2" id="fieldEmail" 
+                                 required="required" 
+                                 requiredMessage="Campo obrigatório"
+                                 label="Email address"
+                                 value="#{funcionarioMB.funcionario.email}" >
+                    </h:inputText>
+                    <h:inputSecret class=" form-control mt-2 mb-2" id="fieldSenha"
+                                   required="required"
+                                   requiredMessage="campo obrigatório"
+                                   label="Senha"
+                                   value="#{funcionarioMB.funcionario.senha}">
+                    </h:inputSecret>
+                    <h:messages id="msgInfo"
+                                infoClass="btn btn-bg alert-success"
+                                warnClass="btn btn-bg alert-warning"
+                                errorClass="btn btn-bg alert-danger"
+                                fatalClass="btn btn-bg alert-danger"
+                                globalOnly="false"
+                                />
+                    <div class="col-md-12 text-center">
+                        <h:commandButton class="btn btn-primary mt-2 mb-2 text-center " value="Entrar" action="#{funcionarioMB.loginFuncionario()}"></h:commandButton>
+                    </div>
+                </h:form>
+
+            </div>
+        </h:body>    </h:body>
+</html>
+
